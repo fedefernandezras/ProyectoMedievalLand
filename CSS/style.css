@@ -1,5 +1,5 @@
 @font-face {
-  font-family:ancient;
+  font-family: ancient;
   src: url(../assets/Font/Ancient\ Medium.ttf);
 }
 
@@ -9,6 +9,9 @@
   box-sizing: border-box;
 }
 
+.navbar-toggler {
+  border: none;
+}
 body {
   background-color: rgb(249, 205, 151);
   text-transform: capitalize;
@@ -19,40 +22,20 @@ body {
 }
 
 h1 {
-  font-family:ancient, Georgia, "Times New Roman", Times, sans-serif;
-  font-size: 70px;
+  font-family: ancient, Georgia, "Times New Roman", Times, sans-serif;
+  font-size: 25px;
   letter-spacing: 2px;
   color: coral;
-  margin-top: 50px;
   text-shadow: 0 0 5px black;
-
 }
 
 h2 {
-  font-family:ancient, Georgia, "Times New Roman", Times, sans-serif;
+  font-family: ancient, Georgia, "Times New Roman", Times, sans-serif;
   font-size: 50px;
   letter-spacing: 2px;
   margin: 30px;
   color: coral;
   text-shadow: 0 0 7px black;
-}
-
-nav {
-  background-color:rgb(52, 52, 52);
-}
-
-.banner {
-  background-color: rgb(96, 96, 96);
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  height: auto;
-}
-
-.banner img {
-  width: 70px;
-  height: 70px;
-  margin-top: 50px;
 }
 
 a {
@@ -136,9 +119,16 @@ article {
 .galeriaman {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 500px);
+  grid-template-rows: repeat(6, 800px);
   grid-gap: 30px;
   margin: 30px;
+  grid-template-areas:
+    "manual1"
+    "manual2"
+    "manual3"
+    "manualp1"
+    "manualp2"
+    "manualp3";
 }
 
 .item {
@@ -149,26 +139,32 @@ article {
 
 .manual1 {
   background-image: url(../assets/manual1.jpg);
+  grid-area: manual1;
 }
 
 .manual2 {
   background-image: url(../assets/manual2.jpg);
+  grid-area: manual2;
 }
 
 .manual3 {
   background-image: url(../assets/manual3.jpg);
+  grid-area: manual3;
 }
 
 .manualp1 {
   background-image: url(../assets/manualp1.jpg);
+  grid-area: manualp1;
 }
 
 .manualp2 {
   background-image: url(../assets/manualp2.jpg);
+  grid-area: manualp2;
 }
 
 .manualp3 {
   background-image: url(../assets/manualp3.jpg);
+  grid-area: manualp3;
 }
 
 .item1 {
@@ -280,6 +276,11 @@ article {
   grid-area: img9;
 }
 
+@media only screen and (min-width: 325px) {
+  h1 {
+    font-size: 55px;
+  }
+}
 @media only screen and (min-width: 768px) {
   article {
     font-size: 25px;
@@ -290,8 +291,14 @@ article {
   }
   .galeriaman {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 300px);
+    grid-template-rows: repeat(3, 500px);
+
+    grid-template-areas:
+      "manual1 manual2"
+      "manual3 manualp1"
+      "manualp2 manualp3";
   }
+
   .galeriaesc {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(5, 500px);
@@ -310,7 +317,11 @@ article {
   }
   .galeriaman {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(2, 600px);
+    grid-template-rows: repeat(2, 500px);
+
+    grid-template-areas:
+      "manual1 manual2 manual3 "
+      "manualp1 manualp2 manualp3";
   }
   .galeriaesc {
     grid-template-columns: 1fr 1fr 1fr;

@@ -25,20 +25,60 @@
     <link rel="shortcut icon" href="./assets/logo.png" />
   </head>
   <body>
-    <div class="banner">
-      <img src="./assets/Dragon.png" alt="dragon" />
-      <h1>medieval land</h1>
-    </div>
     <!-- nav ini -->
-    <nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <ul>
-          <li><a href="./index.html">inicio</a></li>
-          <li><a href="./pages/contacto.html">contacto</a></li>
-          <li><a href="./pages/minis.html">miniaturas</a></li>
-          <li><a href="./pages/manuales.html">manuales</a></li>
-          <li><a href="./pages/escenarios.html">escenarios</a></li>
-        </ul>
+        <a class="navbar-brand" href="index.html"
+          ><img src="./assets/Dragon.png" alt="dralog" width="55" height="55"
+        /></a>
+        <a class="navbar-brand" href="index.html"><h1>medieval land</h1></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"          
+        >       
+          <span><i class="fa-solid fa-bars"></i></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="./pages/contacto.html"
+                >contacto</a
+              >
+            </li>                        
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="./pages/escenarios.html"
+                >escenarios</a
+              >
+            </li>                        
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="./pages/minis.html"
+                >miniaturas</a
+              >
+            </li>                        
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="./pages/manuales.html"
+                >manuales</a
+              >
+            </li>                        
+          </ul>
+        </div>
       </div>
     </nav>
     <!-- nav end -->
