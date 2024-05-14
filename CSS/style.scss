@@ -2,6 +2,23 @@
   font-family: ancient;
   src: url(../assets/Font/Ancient\ Medium.ttf);
 }
+
+$color1: rgb(203, 12, 12);
+$color2: rgb(196, 97, 61);
+$color3: rgb(236, 78, 78);
+$color4: rgb(10, 205, 23);
+$color5: rgb(14, 60, 8);
+$color6: rgb(189, 236, 78);
+$basecolor: rgb(207, 208, 255);
+
+$font1: ancient;
+
+$altura: 100px;
+$altura2: 200px;
+
+$aspecto: calabozo;
+//condicion - calabozo para un aspecto rojo, bosque para verde y el else es un estilo blanco
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +26,13 @@
 }
 
 body {
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)), linear-gradient(to top right, rgba(232, 70, 0, 0.39), rgba(19, 156, 124, 0.253)), url(../assets/fondo.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)),
+    linear-gradient(
+      to top right,
+      rgba(232, 70, 0, 0.39),
+      rgba(19, 156, 124, 0.253)
+    ),
+    url(../assets/fondo.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -20,37 +43,55 @@ body {
   font-family: Georgia, "Times New Roman", Times, sans-serif;
 }
 
-.propiedadesh, h2, h1 {
-  font-family: ancient, Georgia, "Times New Roman", Times, sans-serif;
+.propiedadesh {
+  font-family: $font1, Georgia, "Times New Roman", Times, sans-serif;
+
   letter-spacing: 2px;
+
   text-shadow: 0 0 5px black;
-  color: rgb(203, 12, 12);
+
+  @if $aspecto==calabozo {
+    color: $color1;
+  } @else if $aspecto==bosque {
+    color: $color4;
+  } @else {
+    color: white;
+  }
 }
 
 h1 {
   font-size: 30px;
+  @extend .propiedadesh;
 }
 
 h2 {
   font-size: 45px;
   margin: 30px;
+  @extend .propiedadesh;
 }
 
 h3 {
   margin-top: 30px;
 }
-
+//nesting
 .navbar-toggler {
   border: none;
-}
-.navbar-toggler .navbar-toggler:focus {
-  box-shadow: none;
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
 }
 
 a {
   text-decoration: none;
+
   text-shadow: 0 0 5px black;
-  color: rgb(236, 78, 78) !important;
+  @if $aspecto==calabozo {
+    color: $color3 !important;
+  } @else if $aspecto==bosque {
+    color: $color6 !important;
+  } @else {
+    color: white;
+  }
 }
 
 ul {
@@ -64,25 +105,31 @@ ul {
 form {
   margin: 30px !important;
 }
-
+//nesting
 footer {
   background-color: rgb(0, 0, 0);
   font-size: 15px;
   color: white;
-}
-footer a {
-  font-size: 30px;
-  letter-spacing: 8px;
-}
-footer footer :hover {
-  color: coral;
+  a {
+    font-size: 30px;
+    letter-spacing: 8px;
+  }
+  footer :hover {
+    color: coral;
+  }
 }
 
 .party img {
   border-radius: 8px;
   margin-bottom: 20px;
   transition: all 1s;
-  border: 2px solid rgb(196, 97, 61);
+  @if $aspecto==calabozo {
+    border: 2px solid $color2;
+  } @else if $aspecto==bosque {
+    border: 2px solid $color5;
+  } @else {
+    border: 2px solid white;
+  }
 }
 
 .party img:hover {
@@ -118,11 +165,9 @@ footer footer :hover {
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
-
 .roll {
   margin-bottom: 30px;
 }
-
 @keyframes rolldice {
   0% {
     opacity: 1;
@@ -143,128 +188,23 @@ footer footer :hover {
     opacity: 1;
   }
 }
-.bucle-1 {
-  border: 3px solid #9e4d30;
-}
 
-.bucle-2 {
-  border: 3px solid #773a24;
-}
+//bucles, bordes de las galerias
 
-.bucle-3 {
-  border: 3px solid #502718;
+@for $in from 1 through 6 {
+  .bucle-#{$in} {
+    border: 3px solid darken($color2, $in * 10%);
+  }
 }
-
-.bucle-4 {
-  border: 3px solid #29140c;
+@for $inc from 1 through 16 {
+  .degrade-#{$inc} {
+    border: 3px solid darken($color2, $inc * 6%);
+  }
 }
-
-.bucle-5 {
-  border: 3px solid #020100;
-}
-
-.bucle-6 {
-  border: 3px solid black;
-}
-
-.degrade-1 {
-  border: 3px solid #ae5535;
-}
-
-.degrade-2 {
-  border: 3px solid #964a2e;
-}
-
-.degrade-3 {
-  border: 3px solid #7f3e27;
-}
-
-.degrade-4 {
-  border: 3px solid #67331f;
-}
-
-.degrade-5 {
-  border: 3px solid #502718;
-}
-
-.degrade-6 {
-  border: 3px solid #381c11;
-}
-
-.degrade-7 {
-  border: 3px solid #21100a;
-}
-
-.degrade-8 {
-  border: 3px solid #090503;
-}
-
-.degrade-9 {
-  border: 3px solid black;
-}
-
-.degrade-10 {
-  border: 3px solid black;
-}
-
-.degrade-11 {
-  border: 3px solid black;
-}
-
-.degrade-12 {
-  border: 3px solid black;
-}
-
-.degrade-13 {
-  border: 3px solid black;
-}
-
-.degrade-14 {
-  border: 3px solid black;
-}
-
-.degrade-15 {
-  border: 3px solid black;
-}
-
-.degrade-16 {
-  border: 3px solid black;
-}
-
-.coloracion-1 {
-  border: 3px solid #9e4d30;
-}
-
-.coloracion-2 {
-  border: 3px solid #773a24;
-}
-
-.coloracion-3 {
-  border: 3px solid #502718;
-}
-
-.coloracion-4 {
-  border: 3px solid #29140c;
-}
-
-.coloracion-5 {
-  border: 3px solid #020100;
-}
-
-.coloracion-6 {
-  border: 3px solid black;
-}
-
-.coloracion-7 {
-  border: 3px solid black;
-}
-
-.coloracion-8 {
-  border: 3px solid black;
-}
-
-.coloracion-9 {
-  border: 3px solid black;
+@for $in from 1 through 9 {
+  .coloracion-#{$in} {
+    border: 3px solid darken($color2, $in * 10%);
+  }
 }
 
 article {
@@ -279,15 +219,14 @@ article {
   width: 300px;
   transition: all 1s;
 }
-
 .drago:hover {
   transform: rotatey(360deg);
 }
-
+//operaciones matematicas (hay varias con respecto a los tamaños de imagenes en galerias y queries)
 .galeriamini {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(16, 500px);
+  grid-template-rows: repeat(16, $altura * 5);
   grid-gap: 10px;
   margin: 10px;
 }
@@ -295,19 +234,34 @@ article {
 .galeriaesc {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(9, 500px);
+  grid-template-rows: repeat(9, ($altura2 * 2) + $altura);
   grid-gap: 10px;
   margin: 10px;
-  grid-template-areas: "img1" "img2" "img3" "img4" "img5" "img6" "img7" "img8" "img9";
+  grid-template-areas:
+    "img1"
+    "img2"
+    "img3"
+    "img4"
+    "img5"
+    "img6"
+    "img7"
+    "img8"
+    "img9";
 }
 
 .galeriaman {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 800px);
+  grid-template-rows: repeat(6, $altura2 * 4);
   grid-gap: 10px;
   margin: 10px;
-  grid-template-areas: "manual1" "manual2" "manual3" "manualp1" "manualp2" "manualp3";
+  grid-template-areas:
+    "manual1"
+    "manual2"
+    "manual3"
+    "manualp1"
+    "manualp2"
+    "manualp3";
 }
 
 .manual1 {
@@ -466,6 +420,7 @@ article {
     margin: 20px;
   }
 }
+
 @media only screen and (min-width: 768px) {
   h1 {
     font-size: 55px;
@@ -475,39 +430,56 @@ article {
   }
   .galeriamini {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(8, 600px);
+    grid-template-rows: repeat(8, $altura2 * 3);
     grid-gap: 30px;
     margin: 30px;
   }
   .galeriaman {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 800px);
+    grid-template-rows: repeat(3, $altura2 * 4);
     grid-gap: 30px;
     margin: 30px;
-    grid-template-areas: "manual1 manual2" "manual3 manualp1" "manualp2 manualp3";
+
+    grid-template-areas:
+      "manual1 manual2"
+      "manual3 manualp1"
+      "manualp2 manualp3";
   }
+
   .galeriaesc {
     grid-gap: 30px;
     margin: 30px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, 600px);
-    grid-template-areas: "img1 img1" "img2 img3" "img4 img5" "img6 img7" "img8 img9";
+    grid-template-rows: repeat(5, $altura2 * 3);
+    grid-template-areas:
+      "img1 img1"
+      "img2 img3"
+      "img4 img5"
+      "img6 img7"
+      "img8 img9";
   }
 }
 @media only screen and (min-width: 1200px) {
   .galeriamini {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(6, 600px);
+    grid-template-rows: repeat(6, $altura2 * 3);
   }
   .galeriaman {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(2, 800px);
-    grid-template-areas: "manual1 manual2 manual3 " "manualp1 manualp2 manualp3";
+    grid-template-rows: repeat(2, $altura2 * 4);
+
+    grid-template-areas:
+      "manual1 manual2 manual3 "
+      "manualp1 manualp2 manualp3";
   }
   .galeriaesc {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(4, 600px);
-    grid-template-areas: "img1 img1 img2" "img3 img4 img4" "img5 img5 img6" "img7 img8 img9";
+    grid-template-rows: repeat(4, $altura2 * 3);
+    grid-template-areas:
+      "img1 img1 img2"
+      "img3 img4 img4"
+      "img5 img5 img6"
+      "img7 img8 img9";
   }
   .item1 {
     grid-column: 1/2;
@@ -574,5 +546,3 @@ article {
     grid-row: 6/7;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
