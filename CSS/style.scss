@@ -33,7 +33,7 @@ body {
       rgba(19, 156, 124, 0.253)
     ),
     url(../assets/fondo.jpg);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
   background-size: cover;
   text-transform: capitalize;
@@ -70,10 +70,7 @@ h2 {
   @extend .propiedadesh;
 }
 
-h3 {
-  margin-top: 30px;
-}
-//nesting
+//anidacion
 .navbar-toggler {
   border: none;
   .navbar-toggler:focus {
