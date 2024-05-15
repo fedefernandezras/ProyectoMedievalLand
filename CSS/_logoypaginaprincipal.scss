@@ -1,0 +1,43 @@
+.party img {
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: all 1s;
+    @if $aspecto==calabozo {
+      border: 2px solid $color2;
+    } @else if $aspecto==bosque {
+      border: 2px solid $color5;
+    } @else {
+      border: 2px solid white;
+    }
+  }
+  
+  .party img:hover {
+    transform: rotate(1deg);
+  }
+  
+  
+  
+  .logo {
+    transition: all 1s;
+  }
+  
+  .logo:hover {
+    transform: rotatey(360deg);
+  }
+  
+  .dado {
+    animation-name: rolldice;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+  .roll {
+    margin-bottom: 30px;
+  }
+  .drago {
+    width: 300px;
+    transition: all 1s;
+  }
+  .drago:hover {
+    transform: rotatey(360deg);
+  }
+   

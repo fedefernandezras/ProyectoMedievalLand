@@ -1,0 +1,25 @@
+@keyframes rolldice {
+    0% {
+        opacity: 1;
+    }
+
+    15% {
+        transform: rotate(360deg);
+    }
+
+    25% {
+        transform: translatex(100px);
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
