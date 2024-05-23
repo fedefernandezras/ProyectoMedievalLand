@@ -1,5 +1,6 @@
 $altura: 100px;
 $altura2: 200px;
+$altura3: 50px;
 $color1: rgb(203, 12, 12);
 $color2: rgb(196, 97, 61);
 $color3: rgb(236, 78, 78);
@@ -14,15 +15,16 @@ $basecolor: rgb(207, 208, 255);
     border: 3px solid red;
     border-radius: 8px;
     transition: all 1s;
+
+    p {
+        background-color: white;
+    }
 }
 
 .item:hover {
-    transform: translate(0px, 3px);
+    transform: translate(0px, 6px);
 }
 
-.item p {
-    background-color: white;
-}
 //bucles
 @for $in from 1 through 6 {
     .bucle-#{$in} {
@@ -71,7 +73,7 @@ $basecolor: rgb(207, 208, 255);
 .galeriaman {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, $altura2 * 4);
+    grid-template-rows: repeat(6, $altura2 * 2);
     grid-gap: 10px;
     margin: 10px;
     grid-template-areas:
@@ -239,7 +241,43 @@ $basecolor: rgb(207, 208, 255);
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 370px) {
+    .galeriaman {
+        grid-template-rows: repeat(6, ($altura * 4)+$altura3);
+    }
+}
+
+@media only screen and (min-width: 405px) {
+    .galeriaman {
+        grid-template-rows: repeat(6, $altura * 5);
+    }
+}
+
+@media only screen and (min-width: 450px) {
+    .galeriaman {
+        grid-template-rows: repeat(6, $altura * 6);
+    }
+}
+
+@media only screen and (min-width: 540px) {
+    .galeriaman {
+        grid-template-rows: repeat(6, ($altura * 6)+ $altura3);
+    }
+}
+
+@media only screen and (min-width: 585px) {
+    .galeriaman {
+        grid-template-rows: repeat(6, ($altura * 6)+$altura);
+    }
+}
+
+@media only screen and (min-width: 630px) {
+    .galeriaman {
+        grid-template-rows: repeat(6, ($altura * 6)+$altura2);
+    }
+}
+
+@media only screen and (min-width: 720px) {
     .galeriamini {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(8, $altura2 * 3);
@@ -249,7 +287,7 @@ $basecolor: rgb(207, 208, 255);
 
     .galeriaman {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, $altura2 * 4);
+        grid-template-rows: repeat(3, ($altura * 4)+ $altura3);
         grid-gap: 30px;
         margin: 30px;
 
@@ -273,6 +311,24 @@ $basecolor: rgb(207, 208, 255);
     }
 }
 
+@media only screen and (min-width: 810px) {
+    .galeriaman {
+        grid-template-rows: repeat(3, $altura * 5);
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .galeriaman {
+        grid-template-rows: repeat(3, ($altura * 5)+$altura3 );
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .galeriaman {
+        grid-template-rows: repeat(3, ($altura * 6)+$altura3 );
+    }
+}
+
 @media only screen and (min-width: 1200px) {
     .galeriamini {
         grid-template-columns: 1fr 1fr 1fr;
@@ -281,7 +337,7 @@ $basecolor: rgb(207, 208, 255);
 
     .galeriaman {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: repeat(2, $altura2 * 4);
+        grid-template-rows: repeat(2, $altura * 5);
 
         grid-template-areas:
             "manual1 manual2 manual3 "
@@ -376,5 +432,35 @@ $basecolor: rgb(207, 208, 255);
     .item14 {
         grid-column: 3/4;
         grid-row: 6/7;
+    }
+}
+
+@media only screen and (min-width: 1360px) {
+    .galeriaman {
+        grid-template-rows: repeat(3, $altura * 6);
+    }
+}
+
+@media only screen and (min-width: 1620px) {
+    .galeriaman {
+        grid-template-rows: repeat(3, $altura * 7);
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    .galeriaman {
+        grid-template-rows: repeat(3, $altura * 8);
+    }
+}
+
+@media only screen and (min-width: 2150px) {
+    .galeriaman {
+        grid-template-rows: repeat(3, $altura * 9);
+    }
+}
+
+@media only screen and (min-width: 2150px) {
+    .galeriaman {
+        grid-template-rows: repeat(3, $altura2 * 5);
     }
 }

@@ -3,6 +3,11 @@
     src: url(../assets/Font/Ancient\ Medium.ttf);
 }
 
+@font-face {
+    font-family: godofwar;
+    src: url(../assets/Font/GODOFWAR.TTF);
+}
+
 $color1: rgb(203, 12, 12);
 $color2: rgb(196, 97, 61);
 $color3: rgb(236, 78, 78);
@@ -12,6 +17,7 @@ $color6: rgb(189, 236, 78);
 $basecolor: rgb(207, 208, 255);
 
 $font1: ancient;
+$font2: godofwar;
 
 $aspecto: calabozo;
 //condicion - calabozo para un aspecto rojo, bosque para verde y el else es un estilo blanco
@@ -39,11 +45,7 @@ body {
 }
 
 .propiedadesh {
-    font-family: $font1, Georgia, "Times New Roman", Times, sans-serif;
-
     letter-spacing: 2px;
-
-    text-shadow: 0 0 5px black;
 
     @if $aspecto==calabozo {
         color: $color1;
@@ -61,13 +63,18 @@ body {
 h1 {
     font-size: 30px;
     @extend .propiedadesh;
+    font-family:$font1, Georgia, "Times New Roman", Times, sans-serif;
 }
 
 h2 {
     font-size: 45px;
     margin: 30px;
     @extend .propiedadesh;
+    font-family: $font2, "Times New Roman", Times, sans-serif;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+
 }
+
 
 //anidacion
 .navbar-toggler {
@@ -84,6 +91,10 @@ ul {
     justify-content: space-evenly;
     flex-wrap: wrap;
     font-size: 30px;
+
+    li {
+        font-family: $font2;
+    }
 }
 
 a {
@@ -106,10 +117,11 @@ a {
 
 article {
     background-color: antiquewhite;
-    font-size: 18px;
+    font-size: 15px;
     border: 2px solid rgb(196, 97, 61);
     border-radius: 8px;
-    margin: 30px -23px 30px 0px;
+    margin: 20px;
+    text-transform: initial;
 }
 
 @media only screen and (min-width: 320px) {
@@ -125,6 +137,6 @@ article {
 
     article {
         font-size: 25px;
+        margin: 30px;
     }
 }
-

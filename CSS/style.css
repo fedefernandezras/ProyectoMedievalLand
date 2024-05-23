@@ -2,6 +2,10 @@
   font-family: ancient;
   src: url(../assets/Font/Ancient\ Medium.ttf);
 }
+@font-face {
+  font-family: godofwar;
+  src: url(../assets/Font/GODOFWAR.TTF);
+}
 * {
   margin: 0;
   padding: 0;
@@ -21,19 +25,20 @@ body {
 }
 
 .propiedadesh, h2, h1 {
-  font-family: ancient, Georgia, "Times New Roman", Times, sans-serif;
   letter-spacing: 2px;
-  text-shadow: 0 0 5px black;
   color: rgb(203, 12, 12);
 }
 
 h1 {
   font-size: 30px;
+  font-family: ancient, Georgia, "Times New Roman", Times, sans-serif;
 }
 
 h2 {
   font-size: 45px;
   margin: 30px;
+  font-family: godofwar, "Times New Roman", Times, sans-serif;
+  text-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
 .navbar-toggler {
@@ -50,6 +55,9 @@ ul {
   flex-wrap: wrap;
   font-size: 30px;
 }
+ul li {
+  font-family: godofwar;
+}
 
 a {
   text-decoration: none;
@@ -59,10 +67,11 @@ a {
 
 article {
   background-color: antiquewhite;
-  font-size: 18px;
+  font-size: 15px;
   border: 2px solid rgb(196, 97, 61);
   border-radius: 8px;
-  margin: 30px -23px 30px 0px;
+  margin: 20px;
+  text-transform: initial;
 }
 
 @media only screen and (min-width: 320px) {
@@ -76,8 +85,22 @@ article {
   }
   article {
     font-size: 25px;
+    margin: 30px;
   }
 }
+footer {
+  background-color: rgb(0, 0, 0);
+  font-size: 15px;
+  color: white;
+}
+footer a {
+  font-size: 30px;
+  letter-spacing: 8px;
+}
+footer footer :hover {
+  color: coral;
+}
+
 .party img {
   border-radius: 8px;
   margin-bottom: 20px;
@@ -116,19 +139,6 @@ article {
   transform: rotatey(360deg);
 }
 
-footer {
-  background-color: rgb(0, 0, 0);
-  font-size: 15px;
-  color: white;
-}
-footer a {
-  font-size: 30px;
-  letter-spacing: 8px;
-}
-footer footer :hover {
-  color: coral;
-}
-
 .item {
   background-position: center;
   background-size: cover;
@@ -136,13 +146,12 @@ footer footer :hover {
   border-radius: 8px;
   transition: all 1s;
 }
-
-.item:hover {
-  transform: translate(0px, 3px);
-}
-
 .item p {
   background-color: white;
+}
+
+.item:hover {
+  transform: translate(0px, 6px);
 }
 
 .bucle-1 {
@@ -289,7 +298,7 @@ footer footer :hover {
 .galeriaman {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 800px);
+  grid-template-rows: repeat(6, 400px);
   grid-gap: 10px;
   margin: 10px;
   grid-template-areas: "manual1" "manual2" "manual3" "manualp1" "manualp2" "manualp3";
@@ -448,7 +457,37 @@ footer footer :hover {
     margin: 20px;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 370px) {
+  .galeriaman {
+    grid-template-rows: repeat(6, 450px);
+  }
+}
+@media only screen and (min-width: 405px) {
+  .galeriaman {
+    grid-template-rows: repeat(6, 500px);
+  }
+}
+@media only screen and (min-width: 450px) {
+  .galeriaman {
+    grid-template-rows: repeat(6, 600px);
+  }
+}
+@media only screen and (min-width: 540px) {
+  .galeriaman {
+    grid-template-rows: repeat(6, 650px);
+  }
+}
+@media only screen and (min-width: 585px) {
+  .galeriaman {
+    grid-template-rows: repeat(6, 700px);
+  }
+}
+@media only screen and (min-width: 630px) {
+  .galeriaman {
+    grid-template-rows: repeat(6, 800px);
+  }
+}
+@media only screen and (min-width: 720px) {
   .galeriamini {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(8, 600px);
@@ -457,7 +496,7 @@ footer footer :hover {
   }
   .galeriaman {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 800px);
+    grid-template-rows: repeat(3, 450px);
     grid-gap: 30px;
     margin: 30px;
     grid-template-areas: "manual1 manual2" "manual3 manualp1" "manualp2 manualp3";
@@ -470,6 +509,21 @@ footer footer :hover {
     grid-template-areas: "img1 img1" "img2 img3" "img4 img5" "img6 img7" "img8 img9";
   }
 }
+@media only screen and (min-width: 810px) {
+  .galeriaman {
+    grid-template-rows: repeat(3, 500px);
+  }
+}
+@media only screen and (min-width: 900px) {
+  .galeriaman {
+    grid-template-rows: repeat(3, 550px);
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .galeriaman {
+    grid-template-rows: repeat(3, 650px);
+  }
+}
 @media only screen and (min-width: 1200px) {
   .galeriamini {
     grid-template-columns: 1fr 1fr 1fr;
@@ -477,7 +531,7 @@ footer footer :hover {
   }
   .galeriaman {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(2, 800px);
+    grid-template-rows: repeat(2, 500px);
     grid-template-areas: "manual1 manual2 manual3 " "manualp1 manualp2 manualp3";
   }
   .galeriaesc {
@@ -548,6 +602,31 @@ footer footer :hover {
   .item14 {
     grid-column: 3/4;
     grid-row: 6/7;
+  }
+}
+@media only screen and (min-width: 1360px) {
+  .galeriaman {
+    grid-template-rows: repeat(3, 600px);
+  }
+}
+@media only screen and (min-width: 1620px) {
+  .galeriaman {
+    grid-template-rows: repeat(3, 700px);
+  }
+}
+@media only screen and (min-width: 1900px) {
+  .galeriaman {
+    grid-template-rows: repeat(3, 800px);
+  }
+}
+@media only screen and (min-width: 2150px) {
+  .galeriaman {
+    grid-template-rows: repeat(3, 900px);
+  }
+}
+@media only screen and (min-width: 2150px) {
+  .galeriaman {
+    grid-template-rows: repeat(3, 1000px);
   }
 }
 @keyframes rolldice {
