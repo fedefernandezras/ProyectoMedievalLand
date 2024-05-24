@@ -5,9 +5,13 @@
 
   @if $aspecto==calabozo {
     border: 2px solid $color2;
-  } @else if $aspecto==bosque {
+  }
+
+  @else if $aspecto==bosque {
     border: 2px solid $color5;
-  } @else {
+  }
+
+  @else {
     border: 2px solid white;
   }
 }
@@ -28,10 +32,12 @@
   animation-name: rolldice;
   animation-duration: 5s;
   animation-iteration-count: infinite;
+  visibility: hidden;
 }
 
 .roll {
   margin-bottom: 30px;
+
 }
 
 .drago {
@@ -41,4 +47,13 @@
 
 .drago:hover {
   transform: rotatey(360deg);
+}
+
+@media only screen and (min-width: 480px) {
+  .dado {
+    animation-name: rolldice;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    visibility:visible;
+  }
 }

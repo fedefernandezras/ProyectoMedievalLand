@@ -13,10 +13,7 @@
 }
 
 body {
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)), linear-gradient(to top right, rgba(232, 70, 0, 0.39), rgba(19, 156, 124, 0.253)), url(../assets/fondo.jpg);
-  background-repeat: repeat;
-  background-position: center;
-  background-size: cover;
+  background-color: rgb(58, 54, 54);
   text-transform: capitalize;
   align-items: center;
   text-align: center;
@@ -79,6 +76,14 @@ article {
     font-size: 50px;
   }
 }
+@media only screen and (min-width: 480px) {
+  body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)), linear-gradient(to top right, rgba(232, 70, 0, 0.39), rgba(19, 156, 124, 0.253)), url(../assets/fondo.jpg);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
 @media only screen and (min-width: 768px) {
   h1 {
     font-size: 55px;
@@ -124,6 +129,7 @@ footer footer :hover {
   animation-name: rolldice;
   animation-duration: 5s;
   animation-iteration-count: infinite;
+  visibility: hidden;
 }
 
 .roll {
@@ -139,6 +145,14 @@ footer footer :hover {
   transform: rotatey(360deg);
 }
 
+@media only screen and (min-width: 480px) {
+  .dado {
+    animation-name: rolldice;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    visibility: visible;
+  }
+}
 .item {
   background-position: center;
   background-size: cover;
