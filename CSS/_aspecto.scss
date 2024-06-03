@@ -29,7 +29,15 @@ $aspecto: calabozo;
 }
 
 body {
-    background-color: rgb(58, 54, 54);
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)),
+        linear-gradient(to top right,
+            rgba(232, 70, 0, 0.39),
+            rgba(19, 156, 124, 0.253)),
+        url(../assets/fondol.jpg);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+
     text-transform: capitalize;
     align-items: center;
     text-align: center;
@@ -65,9 +73,7 @@ h2 {
     @extend .propiedadesh;
     font-family: $font2, "Times New Roman", Times, sans-serif;
     text-shadow: 0 0 10px rgb(255, 255, 255);
-
 }
-
 
 //anidacion
 .navbar-toggler {
@@ -117,22 +123,22 @@ article {
     text-transform: initial;
 }
 
+.ws {
+    border: 2px solid rgba(0, 0, 0, 0.785);
+    margin: 30px;
+
+    p {
+        font-size: 20px;
+        color: green;
+        font-family: $font2, "Times New Roman", Times, sans-serif;
+        text-shadow: 0 0 5px rgb(0, 0, 0);
+    }
+
+}
+
 @media only screen and (min-width: 320px) {
     h1 {
         font-size: 50px;
-    }
-}
-
-@media only screen and (min-width: 480px) {
-    body {
-        background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)),
-            linear-gradient(to top right,
-                rgba(232, 70, 0, 0.39),
-                rgba(19, 156, 124, 0.253)),
-            url(../assets/fondo.jpg);
-        background-repeat: repeat;
-        background-position: center;
-        background-size: cover;
     }
 }
 
@@ -144,5 +150,22 @@ article {
     article {
         font-size: 25px;
         margin: 30px;
+    }
+
+    body {
+        background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)),
+            linear-gradient(to top right,
+                rgba(232, 70, 0, 0.39),
+                rgba(19, 156, 124, 0.253)),
+            url(../assets/fondo.jpg);
+    }
+
+    .ws {
+
+        p {
+            font-size: 50px;
+
+        }
+
     }
 }

@@ -13,7 +13,10 @@
 }
 
 body {
-  background-color: rgb(58, 54, 54);
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)), linear-gradient(to top right, rgba(232, 70, 0, 0.39), rgba(19, 156, 124, 0.253)), url(../assets/fondol.jpg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
   text-transform: capitalize;
   align-items: center;
   text-align: center;
@@ -71,17 +74,20 @@ article {
   text-transform: initial;
 }
 
+.ws {
+  border: 2px solid rgba(0, 0, 0, 0.785);
+  margin: 30px;
+}
+.ws p {
+  font-size: 20px;
+  color: green;
+  font-family: godofwar, "Times New Roman", Times, sans-serif;
+  text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
 @media only screen and (min-width: 320px) {
   h1 {
     font-size: 50px;
-  }
-}
-@media only screen and (min-width: 480px) {
-  body {
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)), linear-gradient(to top right, rgba(232, 70, 0, 0.39), rgba(19, 156, 124, 0.253)), url(../assets/fondo.jpg);
-    background-repeat: repeat;
-    background-position: center;
-    background-size: cover;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -91,6 +97,12 @@ article {
   article {
     font-size: 25px;
     margin: 30px;
+  }
+  body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)), linear-gradient(to top right, rgba(232, 70, 0, 0.39), rgba(19, 156, 124, 0.253)), url(../assets/fondo.jpg);
+  }
+  .ws p {
+    font-size: 50px;
   }
 }
 footer {
@@ -319,141 +331,141 @@ footer footer :hover {
 }
 
 .manual1 {
-  background-image: url(../assets/manual1.jpg);
+  background-image: url(../assets/manual1l.jpg);
   grid-area: manual1;
 }
 
 .manual2 {
-  background-image: url(../assets/manual2.jpg);
+  background-image: url(../assets/manual2l.jpg);
   grid-area: manual2;
 }
 
 .manual3 {
-  background-image: url(../assets/manual3.jpg);
+  background-image: url(../assets/manual3l.jpg);
   grid-area: manual3;
 }
 
 .manualp1 {
-  background-image: url(../assets/manualp1.jpg);
+  background-image: url(../assets/manualp1l.jpg);
   grid-area: manualp1;
 }
 
 .manualp2 {
-  background-image: url(../assets/manualp2.jpg);
+  background-image: url(../assets/manualp2l.jpg);
   grid-area: manualp2;
 }
 
 .manualp3 {
-  background-image: url(../assets/manualp3.jpg);
+  background-image: url(../assets/manualp3l.jpg);
   grid-area: manualp3;
 }
 
 .item1 {
-  background-image: url(../assets/min1.jpg);
+  background-image: url(../assets/min1l.jpg);
 }
 
 .item2 {
-  background-image: url(../assets/min2.jpg);
+  background-image: url(../assets/min2l.jpg);
 }
 
 .item3 {
-  background-image: url(../assets/min3.jpg);
+  background-image: url(../assets/min3l.jpg);
 }
 
 .item4 {
-  background-image: url(../assets/min4.jpg);
+  background-image: url(../assets/min4l.jpg);
 }
 
 .item5 {
-  background-image: url(../assets/min5.jpg);
+  background-image: url(../assets/min5l.jpg);
 }
 
 .item6 {
-  background-image: url(../assets/min6.jpg);
+  background-image: url(../assets/min6l.jpg);
 }
 
 .item7 {
-  background-image: url(../assets/min7.jpg);
+  background-image: url(../assets/min7l.jpg);
 }
 
 .item8 {
-  background-image: url(../assets/min8.jpg);
+  background-image: url(../assets/min8l.jpg);
 }
 
 .item9 {
-  background-image: url(../assets/min9.jpg);
+  background-image: url(../assets/min9l.jpg);
 }
 
 .item10 {
-  background-image: url(../assets/min10.jpg);
+  background-image: url(../assets/min10l.jpg);
 }
 
 .item11 {
-  background-image: url(../assets/min11.jpg);
+  background-image: url(../assets/min11l.jpg);
 }
 
 .item12 {
-  background-image: url(../assets/min12.jpg);
+  background-image: url(../assets/min12l.jpg);
 }
 
 .item13 {
-  background-image: url(../assets/min13.jpg);
+  background-image: url(../assets/min13l.jpg);
 }
 
 .item14 {
-  background-image: url(../assets/min14.jpg);
+  background-image: url(../assets/min14l.jpg);
 }
 
 .item15 {
-  background-image: url(../assets/min15.jpg);
+  background-image: url(../assets/min15l.jpg);
 }
 
 .item16 {
-  background-image: url(../assets/min16.jpg);
+  background-image: url(../assets/min16l.jpg);
 }
 
 .iteme1 {
-  background-image: url(../assets/es1.jpg);
+  background-image: url(../assets/es1l.jpg);
   grid-area: img1;
 }
 
 .iteme2 {
-  background-image: url(../assets/es2.jpg);
+  background-image: url(../assets/es2l.jpg);
   grid-area: img2;
 }
 
 .iteme3 {
-  background-image: url(../assets/es3.jpg);
+  background-image: url(../assets/es3l.jpg);
   grid-area: img3;
 }
 
 .iteme4 {
-  background-image: url(../assets/es4.jpg);
+  background-image: url(../assets/es4l.jpg);
   grid-area: img4;
 }
 
 .iteme5 {
-  background-image: url(../assets/es5.jpg);
+  background-image: url(../assets/es5l.jpg);
   grid-area: img5;
 }
 
 .iteme6 {
-  background-image: url(../assets/es6.jpg);
+  background-image: url(../assets/es6l.jpg);
   grid-area: img6;
 }
 
 .iteme7 {
-  background-image: url(../assets/es7.jpg);
+  background-image: url(../assets/es7l.jpg);
   grid-area: img7;
 }
 
 .iteme8 {
-  background-image: url(../assets/es8.jpg);
+  background-image: url(../assets/es8l.jpg);
   grid-area: img8;
 }
 
 .iteme9 {
-  background-image: url(../assets/es9.jpg);
+  background-image: url(../assets/es9l.jpg);
   grid-area: img9;
 }
 
@@ -521,6 +533,99 @@ footer footer :hover {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(5, 600px);
     grid-template-areas: "img1 img1" "img2 img3" "img4 img5" "img6 img7" "img8 img9";
+  }
+  .manual1 {
+    background-image: url(../assets/manual1.jpg);
+  }
+  .manual2 {
+    background-image: url(../assets/manual2.jpg);
+  }
+  .manual3 {
+    background-image: url(../assets/manual3.jpg);
+  }
+  .manualp1 {
+    background-image: url(../assets/manualp1.jpg);
+  }
+  .manualp2 {
+    background-image: url(../assets/manualp2.jpg);
+  }
+  .manualp3 {
+    background-image: url(../assets/manualp3.jpg);
+  }
+  .item1 {
+    background-image: url(../assets/min1.jpg);
+  }
+  .item2 {
+    background-image: url(../assets/min2.jpg);
+  }
+  .item3 {
+    background-image: url(../assets/min3.jpg);
+  }
+  .item4 {
+    background-image: url(../assets/min4.jpg);
+  }
+  .item5 {
+    background-image: url(../assets/min5.jpg);
+  }
+  .item6 {
+    background-image: url(../assets/min6.jpg);
+  }
+  .item7 {
+    background-image: url(../assets/min7.jpg);
+  }
+  .item8 {
+    background-image: url(../assets/min8.jpg);
+  }
+  .item9 {
+    background-image: url(../assets/min9.jpg);
+  }
+  .item10 {
+    background-image: url(../assets/min10.jpg);
+  }
+  .item11 {
+    background-image: url(../assets/min11.jpg);
+  }
+  .item12 {
+    background-image: url(../assets/min12.jpg);
+  }
+  .item13 {
+    background-image: url(../assets/min13.jpg);
+  }
+  .item14 {
+    background-image: url(../assets/min14.jpg);
+  }
+  .item15 {
+    background-image: url(../assets/min15.jpg);
+  }
+  .item16 {
+    background-image: url(../assets/min16.jpg);
+  }
+  .iteme1 {
+    background-image: url(../assets/es1.jpg);
+  }
+  .iteme2 {
+    background-image: url(../assets/es2.jpg);
+  }
+  .iteme3 {
+    background-image: url(../assets/es3.jpg);
+  }
+  .iteme4 {
+    background-image: url(../assets/es4.jpg);
+  }
+  .iteme5 {
+    background-image: url(../assets/es5.jpg);
+  }
+  .iteme6 {
+    background-image: url(../assets/es6.jpg);
+  }
+  .iteme7 {
+    background-image: url(../assets/es7.jpg);
+  }
+  .iteme8 {
+    background-image: url(../assets/es8.jpg);
+  }
+  .iteme9 {
+    background-image: url(../assets/es9.jpg);
   }
 }
 @media only screen and (min-width: 810px) {
